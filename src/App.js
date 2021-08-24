@@ -1,3 +1,11 @@
-export default function App () {
-    return (<div></div>);
+import Container from "./Container";
+import Backdrop from "./Backdrop";
+
+export default function App() {
+  return (
+    <>
+      <Container />
+      <Backdrop />
+    </>
+  );
 }
