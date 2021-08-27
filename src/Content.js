@@ -13,6 +13,7 @@ export default function Content() {
           preco: "R$14,90",
           selected: false,
           id: 1,
+          qtd: 0,
         },
         {
           classeOpcao: "bigmac",
@@ -21,6 +22,7 @@ export default function Content() {
           preco: "R$9,90",
           selected: false,
           id: 2,
+          qtd: 0,
         },
         {
           classeOpcao: "mcchicken",
@@ -29,6 +31,7 @@ export default function Content() {
           preco: "R$8,90",
           selected: false,
           id: 3,
+          qtd: 0,
         },
         {
           classeOpcao: "cheddar",
@@ -37,6 +40,7 @@ export default function Content() {
           preco: "R$9,90",
           selected: false,
           id: 4,
+          qtd: 0,
         },
       ],
     },
@@ -51,6 +55,7 @@ export default function Content() {
           preco: "R$6,90",
           selected: false,
           id: 5,
+          qtd: 0,
         },
         {
           classeOpcao: "coca",
@@ -59,6 +64,7 @@ export default function Content() {
           preco: "R$7,90",
           selected: false,
           id: 6,
+          qtd: 0,
         },
         {
           classeOpcao: "sprite",
@@ -67,6 +73,7 @@ export default function Content() {
           preco: "R$5,90",
           selected: false,
           id: 7,
+          qtd: 0,
         },
         {
           classeOpcao: "fanta",
@@ -75,6 +82,7 @@ export default function Content() {
           preco: "R$5,90",
           selected: false,
           id: 8,
+          qtd: 0,
         },
       ],
     },
@@ -89,6 +97,7 @@ export default function Content() {
           preco: "R$3,90",
           selected: false,
           id: 9,
+          qtd: 0,
         },
         {
           classeOpcao: "casquinha",
@@ -97,6 +106,7 @@ export default function Content() {
           preco: "R$1,90",
           selected: false,
           id: 10,
+          qtd: 0,
         },
         {
           classeOpcao: "mcflurry",
@@ -105,6 +115,7 @@ export default function Content() {
           preco: "R$9,90",
           selected: false,
           id: 11,
+          qtd: 0,
         },
         {
           classeOpcao: "sundae",
@@ -113,6 +124,7 @@ export default function Content() {
           preco: "R$5,90",
           selected: false,
           id: 12,
+          qtd: 0,
         },
       ],
     },
