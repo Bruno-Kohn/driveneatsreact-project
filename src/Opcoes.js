@@ -2,15 +2,15 @@ import { useState } from "react";
 
 export default function Opcoes(props) {
   const options = props.opcoes;
-  const [select, setSelect] = useState(false);
+  const [select, setSelect] = useState(options);
+  console.log(select);
 
-  function toSelectOption(option, index) {
+  function toSelectOption(option, index, boolean) {
     console.log(option, "opcao");
     console.log(index, "indice");
-    console.log(option.selected);
+    // console.log(option.selected);
     option.selected = true;
-    console.log(option.selected);
-    setSelect(true);
+    setSelect([...select, option.selected])
   }
 
   return (
@@ -22,7 +22,7 @@ export default function Opcoes(props) {
               ? "description-itens " + option.classeOpcao
               : "description-itens " + option.classeOpcao + " selected"
           }
-          onClick={() => toSelectOption(option, option.id)}
+          onClick={() => toSelectOption(option, option.id, option.selected)}
           key={index}
         >
           <img
