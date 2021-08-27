@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 export default function Opcoes(props) {
   const options = props.opcoes;
+  const [select, setSelect] = useState(false);
 
   function toSelectOption(option, index) {
     console.log(option, "opcao");
@@ -7,13 +10,21 @@ export default function Opcoes(props) {
     console.log(option.selected);
     option.selected = true;
     console.log(option.selected);
+    setSelect(true);
   }
 
-  
   return (
     <>
       {options.map((option, index) => (
-        <li className={(option.selected === false ? ("description-itens " + option.classeOpcao) : ("description-itens " + option.classeOpcao + " selected"))} onClick={() => toSelectOption(option,option.id)} key={index}>
+        <li
+          className={
+            option.selected === false
+              ? "description-itens " + option.classeOpcao
+              : "description-itens " + option.classeOpcao + " selected"
+          }
+          onClick={() => toSelectOption(option, option.id)}
+          key={index}
+        >
           <img
             src={"/images/" + option.classeOpcao + ".jpg"}
             alt={option.classeOpcao}
@@ -29,5 +40,3 @@ export default function Opcoes(props) {
     </>
   );
 }
-
-//className={"description-itens " + option.classeOpcao + " selected"}
