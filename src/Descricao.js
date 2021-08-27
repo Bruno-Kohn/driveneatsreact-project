@@ -5,10 +5,10 @@ export default function Descricao(props) {
 
   return (
     <>
-      <div class="description">
+      <div className="description">
         <h1>{title}</h1>
       </div>
-      <ul class={classe}>
+      <ul className={classe}>
         <Opcoes opcoes={opcoes} />
       </ul>
     </>

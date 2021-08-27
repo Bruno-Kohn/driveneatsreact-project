@@ -4,7 +4,7 @@ import Bottom from './Bottom';
 
 export default function Container() {
   return (
-    <div class="container">
+    <div className="container">
       <Top />
       <Content />
       <Bottom />
