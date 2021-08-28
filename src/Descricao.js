@@ -1,7 +1,7 @@
 import Opcoes from "./Opcoes.js";
 
 export default function Descricao(props) {
-  const { title, classe, opcoes } = props;
+  const { title, classe, opcoes, pedido, setPedido } = props;
 
   return (
     <>
@@ -9,7 +9,7 @@ export default function Descricao(props) {
         <h1>{title}</h1>
       </div>
       <ul className={classe}>
-        <Opcoes opcoes={opcoes} />
+        <Opcoes opcoes={opcoes} pedido={pedido} setPeiddo={setPedido}/>
       </ul>
     </>
   );

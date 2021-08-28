@@ -1,11 +1,11 @@
 import Opcao from "./Opcao";
 
-export default function Opcoes(props) {
-  const options = props.opcoes;
+export default function Opcoes({opcoes, pedido, setPedido}) {
+  
   return (
     <>
-      {options.map((option, index) => (
-        <Opcao opcoes={option} />
+      {opcoes.map((option, index) => (
+        <Opcao opcoes={option} pedido={pedido} setPeiddo={setPedido}/>
       ))}
     </>
   );
