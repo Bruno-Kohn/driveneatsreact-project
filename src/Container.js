@@ -9,8 +9,8 @@ export default function Container() {
   return (
     <div className="container">
       <Top />
-      <Content pedido={pedido} setPeiddo={setPedido}/>
-      <Bottom pedido={pedido} setPeiddo={setPedido}/>
+      <Content pedido={pedido} setPedido={setPedido}/>
+      <Bottom pedido={pedido} setPedido={setPedido}/>
     </div>
   );
 }

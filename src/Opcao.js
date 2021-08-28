@@ -6,6 +6,8 @@ export default function Opcao({opcoes, pedido, setPedido}) {
   const [valor, setValor] = useState(opcoes.qtd);
 
   console.log(opcoes);
+  console.log(pedido);
+  //console.log(setPedido);
 
   function toSelectOption() {
     if (!opcoes.selected) {
@@ -13,21 +15,24 @@ export default function Opcao({opcoes, pedido, setPedido}) {
       opcoes.qtd = valor + 1;
       setValor(valor + 1);
       setSelect({ ...opcoes });
+      //setPedido([...pedido, "aloha"])
     }
   }
 
   function decrementar(e) {
     e.stopPropagation();
     if (valor > 1) {
-      setValor(valor - 1);
-      opcoes.qtd = valor - 1;
-      setSelect({ ...opcoes });
+      decrementarQtd()
     } else {
       opcoes.selected = false;
-      setValor(valor - 1);
+      decrementarQtd()
+    }
+  }
+
+  function decrementarQtd() {
+    setValor(valor - 1);
       opcoes.qtd = valor - 1;
       setSelect({ ...opcoes });
-    }
   }
 
   function incrementar(e) {

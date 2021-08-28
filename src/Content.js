@@ -1,6 +1,6 @@
 import Descricao from "./Descricao";
 
-export default function Content() {
+export default function Content({pedido, setPedido}) {
   const contentConfig = [
     {
       title: "Primeiro, seu prato",
@@ -137,6 +137,8 @@ export default function Content() {
           classe={infos.classe}
           opcoes={infos.opcoes}
           key={index}
+          pedido={pedido}
+          setPedido={setPedido}
         />
       ))}
     </div>
