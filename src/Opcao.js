@@ -2,20 +2,42 @@ import Contador from "./Contador.js";
 import { useState } from "react";
 
 export default function Opcao(props) {
-  
-  const [select, setSelect] = useState(props.opcoes);
   const option = props.opcoes;
+  const [select, setSelect] = useState(option);
+  const [valor, setValor] = useState(option.qtd);
+
   console.log(option);
-  //const index = props.opcoes.id;
 
   function toSelectOption() {
-    option.selected = true;
-    setSelect({...option});
-    if(select){
-        console.log(1)
+    if (!option.selected) {
+      option.selected = true;
+      option.qtd = valor + 1;
+      setValor(valor + 1);
+      setSelect({ ...option });
     }
-    //setValor(valor + 1)
   }
+
+  function decrementar(e) {
+    e.stopPropagation();
+    if (valor > 1) {
+      setValor(valor - 1);
+      option.qtd = valor - 1;
+      setSelect({ ...option });
+    } else {
+      option.selected = false;
+      setValor(valor - 1);
+      option.qtd = valor - 1;
+      setSelect({ ...option });
+    }
+  }
+
+  function incrementar(e) {
+    e.stopPropagation();
+    setValor(valor + 1);
+    option.qtd = valor + 1;
+    setSelect({ ...option });
+  }
+
   return (
     <li
       className={
@@ -23,8 +45,7 @@ export default function Opcao(props) {
           ? "description-itens " + option.classeOpcao
           : "description-itens " + option.classeOpcao + " selected"
       }
-      onClick={() => toSelectOption()}
-      
+      onClick={toSelectOption}
     >
       <img
         src={"/images/" + option.classeOpcao + ".jpg"}
@@ -37,9 +58,9 @@ export default function Opcao(props) {
       </div>
       <Contador
         classe={option.selected === false ? "contador hidden" : "contador"}
-        value={option.selected === true ? 1 : 0}
-        select={select}
-        setSelect={setSelect}
+        incrementar={incrementar}
+        decrementar={decrementar}
+        valor={valor}
       />
     </li>
   );

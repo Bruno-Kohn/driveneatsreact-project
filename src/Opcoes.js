@@ -1,4 +1,3 @@
-
 import Opcao from "./Opcao";
 
 export default function Opcoes(props) {
@@ -6,7 +5,7 @@ export default function Opcoes(props) {
   return (
     <>
       {options.map((option, index) => (
-        <Opcao opcoes={option}/>
+        <Opcao opcoes={option} />
       ))}
     </>
   );

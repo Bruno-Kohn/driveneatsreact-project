@@ -131,7 +131,7 @@ export default function Content() {
   ];
   return (
     <div className="content">
-      {contentConfig.map((infos,index) => (
+      {contentConfig.map((infos, index) => (
         <Descricao
           title={infos.title}
           classe={infos.classe}
