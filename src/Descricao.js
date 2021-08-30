@@ -1,6 +1,6 @@
 import Opcoes from "./Opcoes.js";
 
-export default function Descricao({ title, classe, opcoes, pedido, setPedido }) {
+export default function Descricao({ title, classe, opcoes, pedido, setPedido}) {
 
   return (
     <>
@@ -8,7 +8,7 @@ export default function Descricao({ title, classe, opcoes, pedido, setPedido }) 
         <h1>{title}</h1>
       </div>
       <ul className={classe}>
-        <Opcoes opcoes={opcoes} pedido={pedido} setPedido={setPedido}/>
+        <Opcoes opcoes={opcoes} pedido={pedido} setPedido={setPedido} />
       </ul>
     </>
   );
