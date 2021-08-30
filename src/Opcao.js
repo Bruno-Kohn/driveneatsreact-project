@@ -15,7 +15,7 @@ export default function Opcao({ opcoes, pedido, setPedido }) {
       opcoes.qtd = valor + 1;
       setValor(valor + 1);
       //console.log(opcoes);
-      //setPedido([...pedido, opcoes]); // aqui funciona, mas gera o bug. precisa filtrar tbm para nao repetir os produtos na array
+      setPedido([...pedido, opcoes]); // aqui funciona, mas gera o bug. precisa filtrar tbm para nao repetir os produtos na array
       //console.log(pedido, "MEU PEDIDO");
       //setOrderI();
     }
